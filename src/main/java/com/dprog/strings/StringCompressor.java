@@ -22,6 +22,7 @@ public class StringCompressor {
         StringBuilder sb = new StringBuilder();
         int currentCount = 0;
         char lastRepeatingChar = Character.MIN_VALUE;
+        int lastRepeatingCharLocation = 0;
         for (int windowEnd = 0; windowEnd < in.length(); windowEnd++) {
             char current = in.charAt(windowStart);
             char next = in.charAt(windowEnd);
@@ -29,11 +30,11 @@ public class StringCompressor {
             if(current != next && current != lastRepeatingChar) {
                 windowStart++;
                 sb.append(current);
-
             } else {
                 currentCount++;
                 if(currentCount == k ) {
                     lastRepeatingChar = current;
+                    lastRepeatingCharLocation = windowEnd;
                     System.out.println("last repeating char:: " + lastRepeatingChar);
                     windowStart = windowEnd+1;
                     currentCount = 1;

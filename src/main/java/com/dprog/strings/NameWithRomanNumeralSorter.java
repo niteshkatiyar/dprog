@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class NameWithRomanNumeralSorter {
     /**
      * Classic Ancestor problem, where name also contains a Roman numeral.
-     * sort a given list based on
+     * sort a given list based on Name and then the roman numeral.
      * @param args
      */
 
