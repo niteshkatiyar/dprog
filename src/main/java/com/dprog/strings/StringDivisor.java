@@ -44,9 +44,10 @@ public class StringDivisor {
         }
     }
 
-    private String getSmallestRepetition(String divisor) {
+    private String getSmallestRepetition(String input, String divisor) {
         String repeater = "";
         int windowStart = 0;
+        Character startChar = divisor.charAt(windowStart);
         for(int windowEnd = 0; windowEnd < divisor.length(); windowEnd ++) {
 
         }
